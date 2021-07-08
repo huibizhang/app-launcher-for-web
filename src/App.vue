@@ -46,20 +46,20 @@ export default {
         },
         {
           name:'欠人教訓的提問 & 發問',
-          icon:'./icons/google.svg',
+          icon:'./icons/ray-xu.png',
           hashID:"fsb35ga243dfa32r1",
           bgColor:"#ffffff",
           url:"https://hsiangfeng.github.io/learnexp/20200112/1752686187/",  
           inDock: true,
-          padding:true,
+          padding:false,
           openTime:false
         },
         {
-          name:'Github',
-          icon:'./icons/github.svg',
+          name:'粉絲專頁',
+          icon:'./icons/facebook.svg',
           hashID:"fsb3asfasfdfa32r1",
           bgColor:"#ffffff",
-          url:"https://github.com/tailwindcss-tw/tailwindcss.com/",  
+          url:"https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Flalarabbits-%25E5%2585%2594%25E5%2585%2594%25E6%2595%2599%25E5%25A4%25A7%25E6%259C%25AC%25E7%2587%259F-102150975410839&tabs=timeline&width=320&height=1000&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId",  
           inDock: true,
           padding:false,
           openTime:false
@@ -88,12 +88,12 @@ export default {
         },
         {
           name:'公版圖',
-          icon:'./icons/carrot.svg',
+          icon:'./icons/hackmd.png',
           hashID:"fsb35ga2sfdb6511",
           bgColor:"#ffffff",
           url:"https://hackmd.io/@lalarabbits/rykaZuWpu",  
           inDock: false,
-          padding:true,
+          padding:false,
           openTime:false
         },
         {
