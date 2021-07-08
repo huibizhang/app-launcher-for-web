@@ -15,6 +15,7 @@
         <div class="w-full p-3">
           <div class=" bg-white/30 w-full h-20 rounded-3xl flex justify-between p-3">
             <Application v-for="app in appsInDockList()" v-bind="app" :key="app.name+app.hashID" @click="openedApp = app;openedApp.openTime = new Date().getTime()" />
+            <Application v-bind="fullScreenApp" @click="fullScreen()" />
           </div>
         </div>
       </div>
@@ -117,8 +118,19 @@ export default {
           openTime:false
         }
       ],
+      fullScreenApp:{
+        name:'fullscreen-tool',
+        icon:'./icons/fullscreen.svg',
+        hashID:"dfafsb35243ga32r1",
+        bgColor:"white",
+        url:"",  
+        inDock: true,
+        padding:true,
+        openTime:false
+      },    
       openedApp:null,
       open: false,
+      fullscreen: false,
     }
   },
   mounted(){
@@ -153,6 +165,18 @@ export default {
         }else{
           this.landscape = false
         }
+      }
+    },
+    fullScreen(){
+      this.fullscreen = !this.fullscreen
+      
+      const page = document.documentElement
+      if(page.requestFullscreen && !this.fullscreen){
+        this.fullScreenApp.icon = "./icons/screen-back.svg"
+        page.requestFullscreen()
+      }else if(document.exitFullscreen && this.fullscreen){
+        this.fullScreenApp.icon = "./icons/fullscreen.svg"
+        document.exitFullscreen()
       }
     }
   },
