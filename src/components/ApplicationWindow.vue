@@ -11,7 +11,7 @@
     <div class="w-full h-full relative">
       <div class="w-full h-full bg-black flex flex-col absolute">
         <div class="flex-grow">
-          <iframe v-if="open" :src="url" class="w-full h-full"></iframe>
+          <iframe v-if="contentLoad" :src="url" class="w-full h-full"></iframe>
         </div>
         <div class="p-1 text-center overflow-hidden" @click="appClose()">
           <!-- <div class="w-1/2 h-1 bg-white rounded-full m-auto"></div> -->
@@ -72,6 +72,7 @@ export default {
       start: false,
       finish: true,
       animation: true,
+      contentLoad: false,
     };
   },
   watch: {
@@ -95,10 +96,12 @@ export default {
       this.start = false;
       this.loading = true;
       this.animation = true;
+      this.contentLoad = false;
       this.$emit("appClosed");
     },
     starting() {
       this.start = true;
+      this.contentLoad = true;
     },
     loadingFinish() {
       this.loading = false;
