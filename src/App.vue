@@ -108,11 +108,11 @@ export default {
           openTime:false
         },
         {
-          name:'test-app',
+          name:'pretending-app',
           icon:'./icons/clock.svg',
           hashID:"243dfafsb35ga32r1",
           bgColor:"#408080",
-          url:"https://www.clocktab.com/",  
+          url:"https://pretending-app.vercel.app/#/worldClock",  
           inDock: false,
           padding:false,
           openTime:false
