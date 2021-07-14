@@ -11,6 +11,8 @@
           items-center
           transition-all
           duration-1000
+          hover:brightness-75
+          active:brightness-125
         "
         :style="'background-color:' + bgColor"
       >

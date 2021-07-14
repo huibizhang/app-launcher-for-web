@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-full m-auto font-noto" :class="{'xs:max-w-xs p-3':landscape}">
-    <div id="phone" class="w-full h-full bg-cover overflow-hidden relative" :class="{'xs:rounded-lg':landscape}">
+  <div class="w-full h-full max-h-screen m-auto font-noto" :class="{'p-3':landscape}">
+    <div id="phone" class="w-full h-full bg-cover overflow-hidden relative" :class="{'w-full':!landscape,'xs:rounded-lg mx-auto':landscape}" :style="'max-width:'+maxWidth">
       <!-- desktop -->
       <div class="w-full h-full flex flex-col ">
         <!-- app list -->
@@ -34,6 +34,7 @@ export default {
   data(){
     return {
       landscape: false,
+      maxWidth: "100%",
       apps:[
         // in docks
         {
@@ -165,6 +166,12 @@ export default {
         }else{
           this.landscape = false
         }
+      }
+
+      if(this.landscape){
+        this.maxWidth = Math.round(h/19*9000)/1000 + "px"
+      }else{
+        this.maxWidth = "100%"
       }
     },
     fullScreen(){

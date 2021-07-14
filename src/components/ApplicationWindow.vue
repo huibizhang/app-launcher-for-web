@@ -14,8 +14,8 @@
           <iframe v-if="contentLoad" :src="url" class="w-full h-full"></iframe>
         </div>
         <div class="p-1 text-center overflow-hidden" @click="appClose()">
-          <!-- <div class="w-1/2 h-1 bg-white rounded-full m-auto"></div> -->
-          <span class="text-white text-xs">[ Click me to close App ]</span>
+          <div class="w-2/5 h-1 bg-white rounded-full m-auto my-0.5"></div>
+          <!-- <span class="text-white text-xs">[ Click me to close App ]</span> -->
         </div>
       </div>
       <div
